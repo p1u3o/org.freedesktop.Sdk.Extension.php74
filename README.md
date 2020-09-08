@@ -1,8 +1,8 @@
-# org.freedesktop.Sdk.Extension.php74
+# org.freedesktop.Sdk.Extension.php8
 
 This extension adds PHP support to Flatpak.
 
-PHP installs to `/usr/lib/sdk/php74` inside the sandbox.
+PHP installs to `/usr/lib/sdk/php8` inside the sandbox.
 
 Example Visual Studio Code Configuration
 
