@@ -1,9 +1,9 @@
 {
-	"id": "org.freedesktop.Sdk.Extension.php74",
-	"branch": "19.08",
+	"id": "org.freedesktop.Sdk.Extension.php8",
+	"branch": "20.08",
 	"runtime": "org.freedesktop.Sdk",
 	"sdk": "org.freedesktop.Sdk",
-	"runtime-version": "19.08",
+	"runtime-version": "20.08",
 	"sdk-extensions": [],
 	"build-extension": true,
 	"separate-locales": false,
@@ -34,12 +34,12 @@
 	"build-options": {
 		"no-debuginfo": true,
 		"strip": true,
-		"prefix": "/usr/lib/sdk/php74",
-		"prepend-path": "/usr/lib/sdk/php74/bin",
-		"prepend-ld-library-path": "/usr/lib/sdk/php74/lib",
-		"append-pkg-config-path": "/usr/lib/sdk/php74/lib/pkgconfig",
+		"prefix": "/usr/lib/sdk/php8",
+		"prepend-path": "/usr/lib/sdk/php8/bin",
+		"prepend-ld-library-path": "/usr/lib/sdk/php8/lib",
+		"append-pkg-config-path": "/usr/lib/sdk/php8/lib/pkgconfig",
 		"env": {
-			"PHP_INI_DIR": "/usr/lib/sdk/php74/etc/php"
+			"PHP_INI_DIR": "/usr/lib/sdk/php8/etc/php"
 		}
 	},
 	"modules": [
@@ -138,8 +138,8 @@
 			"buildsystem": "autotools",
 			"config-opts": [
 				"--enable-option-checking=fatal",
-				"--with-config-file-path=/usr/lib/sdk/php74/etc/php",
-				"--with-config-file-scan-dir=/usr/lib/sdk/php74/etc/php/conf.d:/app/etc/php:/var/config/php/7.4/ini",
+				"--with-config-file-path=/usr/lib/sdk/php8/etc/php",
+				"--with-config-file-scan-dir=/usr/lib/sdk/php8/etc/php/conf.d:/app/etc/php:/var/config/php/8.0/ini",
 				"--disable-cgi",
 				"--enable-bcmath",
 				"--enable-calendar",
@@ -166,19 +166,18 @@
 				"--with-curl",
 				"--with-ffi",
 				"--with-gettext",
-				"--with-ldap=/usr/lib/sdk/php74",
+				"--with-ldap=/usr/lib/sdk/php8",
 				"--with-mhash",
 				"--with-mysqli",
 				"--with-openssl",
-				"--with-password-argon2=/usr/lib/sdk/php74",
+				"--with-password-argon2=/usr/lib/sdk/php8",
 				"--with-pdo-mysql",
-				"--with-pdo-pgsql=/usr/lib/sdk/php74",
+				"--with-pdo-pgsql=/usr/lib/sdk/php8",
 				"--with-pdo-sqlite",
 				"--with-pspell",
 				"--with-readline",
 				"--with-sodium",
 				"--with-sqlite3",
-				"--with-xmlrpc",
 				"--with-xsl",
 				"--with-zip",
 				"--with-zlib"
@@ -190,8 +189,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://www.php.net/distributions/php-7.4.9.tar.xz",
-					"sha256": "23733f4a608ad1bebdcecf0138ebc5fd57cf20d6e0915f98a9444c3f747dc57b"
+					"url": "https://downloads.php.net/~carusogabriel/php-8.0.0beta3.tar.xz",
+					"sha256": "a52b4e07e14a3986482e08fdd82df027acc46acaffb6409bef8290dd218fbcec"
 				}
 			]
 		},
@@ -199,7 +198,7 @@
 			"name": "apcu",
 			"buildsystem": "autotools",
 			"config-opts": [
-				"--with-php-config=/usr/lib/sdk/php74/bin/php-config"
+				"--with-php-config=/usr/lib/sdk/php8/bin/php-config"
 			],
 			"post-install": [
 				"install -Dm755 modules/apcu.so $(php -r 'echo ini_get(\"extension_dir\");')/apcu.so",
@@ -228,7 +227,7 @@
 			"name":"xdebug",
 			"buildsystem":"autotools",
 			"config-opts": [
-				"--with-php-config=/usr/lib/sdk/php74/bin/php-config"
+				"--with-php-config=/usr/lib/sdk/php8/bin/php-config"
 			],
 			"post-install": [
 				"install -Dm755 modules/xdebug.so $(php -r 'echo ini_get(\"extension_dir\");')/xdebug.so",
@@ -309,28 +308,28 @@
 					"type": "script",
 					"dest-filename": "install.sh",
 					"commands": [
-						"install -Dm0755 /usr/lib/sdk/php74/bin/php ${FLATPAK_DEST}/php74/bin/php",
-						"install -Dm0755 /usr/lib/sdk/php74/bin/phpdbg ${FLATPAK_DEST}/php74/bin/phpdbg",
-						"install -Dm0755 /usr/lib/sdk/php74/bin/composer ${FLATPAK_DEST}/php74/bin/composer"
+						"install -Dm0755 /usr/lib/sdk/php8/bin/php ${FLATPAK_DEST}/php8/bin/php",
+						"install -Dm0755 /usr/lib/sdk/php8/bin/phpdbg ${FLATPAK_DEST}/php8/bin/phpdbg",
+						"install -Dm0755 /usr/lib/sdk/php8/bin/composer ${FLATPAK_DEST}/php8/bin/composer"
 					]
 				},
 				{
 					"type": "script",
 					"dest-filename": "install-sdk.sh",
 					"commands": [
-						"cp -r /usr/lib/sdk/php74 ${FLATPAK_DEST}/php74"
+						"cp -r /usr/lib/sdk/php8 ${FLATPAK_DEST}/php8"
 					]
 				},
 				{
 					"type": "script",
 					"dest-filename": "enable.sh",
 					"commands": [
-						"export PATH=$PATH:/usr/lib/sdk/php74/bin:/var/config/composer/vendor/bin"
+						"export PATH=$PATH:/usr/lib/sdk/php8/bin:/var/config/composer/vendor/bin"
 					]
 				},
 				{
 					"type": "file",
-					"path": "org.freedesktop.Sdk.Extension.php74.metainfo.xml"
+					"path": "org.freedesktop.Sdk.Extension.php8.metainfo.xml"
 				}
 			]
 		}
