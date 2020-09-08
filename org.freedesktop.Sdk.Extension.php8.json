@@ -236,9 +236,9 @@
 			],
 			"sources":[
 				{
-					"type":"archive",
-					"url":"https://xdebug.org/files/xdebug-2.9.6.tgz",
-					"sha256":"ab03b6014706491b393aa8d520b5bdaf6735a2f1bc12a7772b2916ef2646e454"
+					"type":"git",
+					"url":"https://github.com/xdebug/xdebug.git",
+					"commit":"770bf2b5494f34630863e7a960d7e3b4acd38d57"
 				},
 				{
 					"type":"file",
