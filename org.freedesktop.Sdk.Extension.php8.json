@@ -53,8 +53,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.4.50.tgz",
-					"sha256": "5cb57d958bf5c55a678c6a0f06821e0e5504d5a92e6a33240841fbca1db586b8"
+					"url": "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.4.53.tgz",
+					"sha256": "035860e2fb812f2e294ea3e9914944691e4e4f52521b8945a5aacdcd088d8ae8"
 				}
 			],
 			"post-install": [
@@ -73,8 +73,8 @@
 			"sources":[
 				{
 					"type": "archive",
-					"url": "https://ftp.postgresql.org/pub/source/v12.3/postgresql-12.3.tar.bz2",
-					"sha256": "94ed64a6179048190695c86ec707cc25d016056ce10fc9d229267d9a8f1dcf41"
+					"url": "https://ftp.postgresql.org/pub/source/v13.0/postgresql-13.0.tar.bz2",
+					"sha256": "80e750be8d436b54197636a02636f8fd3263ba6779bf865b04832495ea592296"
 				}
 			],
 			"post-install": [
@@ -189,8 +189,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://downloads.php.net/~carusogabriel/php-8.0.0beta3.tar.xz",
-					"sha256": "a52b4e07e14a3986482e08fdd82df027acc46acaffb6409bef8290dd218fbcec"
+					"url": "https://downloads.php.net/~pollita/php-8.0.0beta4.tar.xz",
+					"sha256": "6059de918632600bef6b96c60f1b922856c1406976a346361897b76d494a0e4c"
 				}
 			]
 		},
@@ -238,7 +238,7 @@
 				{
 					"type":"git",
 					"url":"https://github.com/xdebug/xdebug.git",
-					"commit":"770bf2b5494f34630863e7a960d7e3b4acd38d57"
+					"commit":"18d1aa0231cc5a169b8f520fe86c66e64030414b"
 				},
 				{
 					"type":"file",
@@ -262,14 +262,14 @@
 			"sources": [
 				{
 					"type": "file",
-					"url": "https://getcomposer.org/download/1.10.10/composer.phar",
-					"sha256": "8f16aa77b1236ed40855d8d141c0a939d108a939c8e73f9f32eadd3f05f181b9"
+					"url": "https://getcomposer.org/download/1.10.13/composer.phar",
+					"sha256": "5ca7445cfd48dd27c5a84aa005a47b4d9fd91132313830609875df3a6973708f"
 				},
 				{
 					"type": "git",
 					"url": "https://github.com/composer/composer.git",
-					"tag": "1.10.10",
-					"commit": "32966a3b1d48bc01472a8321fd6472b44fad033a"
+					"tag": "1.10.13",
+					"commit": "47c841ba3b2d3fc0b4b13282cf029ea18b66d78b"
 				}
 			]
 		},
